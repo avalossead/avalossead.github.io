@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #d8b3ff; /* Fondo lila */
+        text-align: center;
+        overflow: hidden; /* Evita el desplazamiento horizontal */
+    }
+    h1 {
+        color: #333;
+        font-size: 3em;
+        margin-top: 100px;
+    }
+    .confetti {
+        position: absolute;
+        background-color: #ffcc00; /* Confeti amarillo */
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation: confetti 2s linear infinite;
+    }
+    .gift {
+        position: absolute;
+        background-color: #ff0000; /* Regalo rojo */
+        width: 20px;
+        height: 20px;
+        animation: gift 3s linear infinite;
+    }
+    .star {
+        position: absolute;
+        background-color: #ffffff; /* Estrella blanca */
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        animation: star 1.5s linear infinite;
+    }
+    .image {
+        position: absolute;
+        width: 100px;
+        height: auto;
+        bottom: 50px;
+    }
+    .image1 { left: 20%; }
+    .image2 { left: 50%; }
+    .image3 { left: 80%; }
+    @keyframes confetti {
+        0% { transform: translateY(-100vh) rotate(0deg); }
+        100% { transform: translateY(100vh) rotate(360deg); }
+    }
+    @keyframes gift {
+        0% { transform: translateY(-100vh); }
+        50% { transform: translateY(0); }
+        100% { transform: translateY(-100vh); }
+    }
+    @keyframes star {
+        0% { transform: translateY(-100vh) rotate(0deg); }
+        100% { transform: translateY(100vh) rotate(360deg); }
+    }
+    .btn {
+        background-color: #ff69b4; /* Botón rosado */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: #ff1493; /* Color rosado más intenso al hacer hover */
+        color: white;
+        transform: scale(1.1); /* Cambia el tamaño al hacer hover */
+    }
+</style>
+</head>
+<body>
+    <h1>Feliz Cumpleaños</h1>
+    <!-- Confeti -->
+    <div class="confetti" style="left: 10%;"></div>
+    <div class="confetti" style="left: 20%;"></div>
+    <div class="confetti" style="left: 30%;"></div>
+    <div class="confetti" style="left: 40%;"></div>
+    <div class="confetti" style="left: 50%;"></div>
+    <div class="confetti" style="left: 60%;"></div>
+    <div class="confetti" style="left: 70%;"></div>
+    <div class="confetti" style="left: 80%;"></div>
+    <div class="confetti" style="left: 90%;"></div>
+    <!-- Regalos -->
+    <div class="gift" style="left: 15%;"></div>
+    <div class="gift" style="left: 35%;"></div>
+    <div class="gift" style="left: 55%;"></div>
+    <div class="gift" style="left: 75%;"></div>
+    <!-- Estrellas -->
+    <div class="star" style="left: 25%;"></div>
+    <div class="star" style="left: 50%;"></div>
+    <div class="star" style="left: 75%;"></div>
+    <!-- Imágenes -->
+    <img class="image image1" src="https://i.pinimg.com/736x/cf/04/b0/cf04b0809d09cb581488d383d48ad56c.jpg" alt="Imagen 1">
+    <img class="image image2" src="https://i.pinimg.com/736x/cf/04/b0/cf04b0809d09cb581488d383d48ad56c.jpg" alt="Imagen 2">
+    <img class="image image3" src="https://s3.getstickerpack.com/storage/uploads/sticker-pack/flork-2/tray_large.png?ed0bb039a87237662689348916a0c4ff&d=100x100" alt="Imagen 3">
+    <!-- Botones -->
+    <button class="btn" onclick="addGiftList()">Agregar lista de regalos</button>
+    <button class="btn" id="bestGiftBtn" onclick="bestGift()">El mejor regalo eres tú</button>
+    <script>
+        function addGiftList() {
+            var bestGiftBtn = document.getElementById('bestGiftBtn');
+            bestGiftBtn.style.transform = 'scale(1.2)';
+        }
+        
+        function bestGift() {
+            alert('¡Correcto! El mejor regalo eres tú.');
+        }
+    </script>
+</body>
+</html>
